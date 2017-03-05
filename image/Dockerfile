@@ -1,2 +1,2 @@
 FROM nfnty/arch-mini:latest
-RUN pacman -Syu --noconfirm; pacman -S --noconfirm git cmake make gcc pkg-config assimp libepoxy sdl2 sdl2_mixer bullet mesa-libgl unittestpp freeimage tinyxml2 pip; yaourt --noconfirm aur/lcov; pip install --user cpp-coveralls; pip install --user pyyaml;
+RUN pacman -Syu --noconfirm; pacman -S --noconfirm git cmake make gcc pkg-config assimp libepoxy sdl2 sdl2_mixer bullet mesa-libgl unittestpp freeimage tinyxml2 yaourt python-pip; yaourt --noconfirm aur/lcov; pip install --user cpp-coveralls; pip install --user pyyaml;
