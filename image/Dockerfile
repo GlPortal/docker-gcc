@@ -3,7 +3,10 @@ RUN pacman -Syu --noconfirm; pacman -S --noconfirm git cmake make gcc pkg-config
 # Add user, group sudo; switch to user
 RUN /usr/sbin/groupadd --system sudo && \
     /usr/sbin/useradd -m --groups sudo user
+RUN mkdir build
+RUN chown user:user build
 USER user
+RUN cd build
 RUN git clone https://aur.archlinux.org/package-query.git
 RUN cd package-query
 RUN makepkg -si
