@@ -18,6 +18,8 @@ RUN pacman -Syu --noconfirm && \
     freeimage \
     tinyxml2
 
+RUN pacman -Scc
+
 RUN mkdir /data
 
 WORKDIR /data
